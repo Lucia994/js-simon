@@ -39,3 +39,14 @@ setTimeout(() => {
   form.classList.remove('d-none');
 }, 30000); //convertito 30sec in 30000 millesimi di secondo
 
+form.addEventListener('submit', function (e) {
+  e.preventDefault()}); // blocca il ricaricamento della pagina
+
+  // Prendo tutti gli input dentro il form
+  const inputs = inputGroup.querySelectorAll('input');
+
+  // Creo un array con i numeri inseriti, trasformandoli da testo a numero
+  const numbersEntered = [];
+  for (let i = 0; i < inputs.length; i++) {
+    numbersEntered.push(parseInt(inputs[i].value));
+  };
