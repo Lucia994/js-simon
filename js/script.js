@@ -40,23 +40,26 @@ setTimeout(() => {
 }, 30000); //convertito 30sec in 30000 millesimi di secondo
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault()}); // blocca il ricaricamento della pagina
+  e.preventDefault()
+}); // blocca il ricaricamento della pagina
 
-  // Prendo tutti gli input dentro il form
-  const inputs = inputGroup.querySelectorAll('input');
+// Prendo tutti gli input dentro il form
+const inputs = inputGroup.querySelectorAll('input');
 
-  // Creo un array con i numeri inseriti, trasformandoli da testo a numero
-  const numbersEntered = [];
-  for (let i = 0; i < inputs.length; i++) {
-    numbersEntered.push(parseInt(inputs[i].value));
-  };
+// Creo un array con i numeri inseriti, trasformandoli da testo a numero
+const numbersEntered = [];
+for (let i = 0; i < inputs.length; i++) {
+  numbersEntered.push(parseInt(inputs[i].value));
+};
 
-    // Controllo quali numeri sono tra quelli generati
-  const numbersMatched = [];
-  for (let i = 0; i < numbersEntered.length; i++) {
-    if (numbers.includes(numbersEntered[i])) {
-      numbersMatched.push(numbersEntered[i]);
-    }
+// Controllo quali numeri sono tra quelli generati
+const numbersMatched = [];
+for (let i = 0; i < numbersEntered.length; i++) {
+  if (numbers.includes(numbersEntered[i])) {
+    numbersMatched.push(numbersEntered[i]);
   }
-  
-  
+}
+
+// Mostro quanti e quali numeri sono stati indovinati
+message.textContent = 'Risposte corrette:' + numbersMatched.length + ' numeri: ' + numbersMatched.join(', ');
+
