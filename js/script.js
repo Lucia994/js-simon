@@ -19,4 +19,16 @@ const form = document.getElementById('answers-form');
 const inputGroup = document.getElementById('input-group');
 const message = document.getElementById('message');
 
+let numbers = [];  // salvo i numeri generati
 
+// Dichiaro la funzione per generare 5 numeri casuali  
+// Dal momento che dobbiamo ripetere la stessa azione 5 volte
+// utilizziamo un ciclo for con inizio a 0 e che termina dopo  5 iterazioni.
+
+for (let i = 0; i < 5; i++) {
+  const n = Math.floor(Math.random() * 50) + 1;
+  numbers.push(n); // li memorizzo
+  const li = document.createElement('li');
+  li.textContent = n;
+  numberList.appendChild(li);
+}
