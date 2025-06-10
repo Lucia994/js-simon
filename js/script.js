@@ -32,3 +32,10 @@ for (let i = 0; i < 5; i++) {
   li.textContent = n;
   numberList.appendChild(li);
 }
+
+// Dopo 30 secondi nasconde i numeri e mostra il form
+setTimeout(() => {
+  numberList.innerHTML = '';
+  form.classList.remove('d-none');
+}, 30000); //convertito 30sec in 30000 millesimi di secondo
+
