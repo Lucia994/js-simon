@@ -50,3 +50,13 @@ form.addEventListener('submit', function (e) {
   for (let i = 0; i < inputs.length; i++) {
     numbersEntered.push(parseInt(inputs[i].value));
   };
+
+    // Controllo quali numeri sono tra quelli generati
+  const numbersMatched = [];
+  for (let i = 0; i < numbersEntered.length; i++) {
+    if (numbers.includes(numbersEntered[i])) {
+      numbersMatched.push(numbersEntered[i]);
+    }
+  }
+  
+  
